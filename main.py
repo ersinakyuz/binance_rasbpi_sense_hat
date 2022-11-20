@@ -1,7 +1,17 @@
 #!/usr/bin/python3
 import time
-from binance.client import Client
-from sense_hat import SenseHat
+import platform
+from binance.client import Client 
+'''For installing this module : pip3 install python-binance'''
+
+''' 
+Check if Raspberry Pi is available, if not use the sense-hat emulator
+'''
+if(platform.machine()) == "armv7l":
+    from sense_hat import SenseHat
+else:
+    from sense_emu import SenseHat
+
 
 BINANCE_API_KEY = ""
 BINANCE_API_SECRET = ""
