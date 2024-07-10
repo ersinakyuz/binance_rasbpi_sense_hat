@@ -1,0 +1,15 @@
+# Ignore env/ directory
+myenv/
+
+# Ignore all .log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Ignore environment variable files
+.env
